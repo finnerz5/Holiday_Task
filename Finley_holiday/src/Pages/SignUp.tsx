@@ -1,9 +1,9 @@
 import axios from "axios";
 import { FormEvent, useState } from "react";
-import "./UserLogin.css";
 
 
-function Userlogin(){
+
+function SignUP(){
     const [UserName, setUserName] = useState("");
     const [Password, setPassword] = useState("");
     const [Message, setMessage] = useState("");
@@ -29,6 +29,9 @@ function Userlogin(){
 
     return (
         <>
+            <p>Welcome to the sign up page.</p>
+            <p>Enter your details below</p>
+
             <form onSubmit={handleSubmit} className="form1">
             <label htmlFor="Username">UserName:</label>
             <input type="text" id="username"  autoComplete="off" onChange={(e) => setUserName(e.target.value)}/>
@@ -44,4 +47,4 @@ function Userlogin(){
 
 };
 
-export default Userlogin;
+export default SignUP;
